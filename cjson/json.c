@@ -4,6 +4,27 @@
 
 
 
+char * split(char* string, int separator){
+    int i=0;
+    int count_bufer=0;
+    int count_array=0;
+    char *array [BUFSIZ] ;
+    char * strbuff [BUFSIZ];
+  
+        
+        while (*(string+i)!=separator)
+        {
+            strbuff[count_bufer]= *(string+i);
+            count_bufer ++;
+            i++;
+
+        }
+    
+    return strbuff;
+    
+}
+
+
 Json_T Json_parser(){
     Json_T json;
     Lista obj;
@@ -15,15 +36,27 @@ Json_T Json_parser(){
 }
 
 char *JSON_2_STRING(Json_T json){printf("transformo en string\n");return "c el mejor";}
-void JSON_get_all(Json_T json,FILE* fichero){printf("cojo todo de un json\n");}
-void JSON_dump(Json_T json,FILE* fichero,int){printf("tiro todo en un json\n");}
+void JSON_get_all(Json_T json,char* fichero){
+    
+    FILE* archivo=fopen(fichero,"r");
+    char lectura_linea[BUFSIZ];
+    do{
+        fgets(lectura_linea,BUFSIZ,archivo);
+        printf("%s",lectura_linea);
+        char* separado = split(lectura_linea,58);
+        printf("%s",separado);
+    }while (fgetc(archivo)!=EOF);
+    
+    
+    fclose(archivo);
+}
+void JSON_dump(Json_T json,char* fichero,int){printf("tiro todo en un json\n");}
 
 int main(void){
-    FILE* json_entidades= fopen("ejemplo.json","r");
+
     Json_T parser = Json_parser();
-    parser.dump(parser,json_entidades,APPEND);
-    parser.get(parser,json_entidades);
-    parser.to_str(parser);
-    fclose(json_entidades);
+    parser.get(parser,"ejemplo.json");
+   
+
     return 0;
 }
