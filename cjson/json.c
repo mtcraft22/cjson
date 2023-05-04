@@ -1,28 +1,37 @@
 #include"listas.h"
 #include"json.h"
 #include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
 
-
-char * split(char* string, int separator){
+char ** split(char* string, int separator){
     int i=0;
+    int j=0;
     int count_bufer=0;
     int count_array=0;
-    char *array [BUFSIZ] ;
-    char * strbuff [BUFSIZ];
-  
-        
-        while (*(string+i)!=separator)
+    char** array=(char **)calloc(BUFSIZ,sizeof(char));
+    char* strbuff=(char *)calloc(BUFSIZ,sizeof(char));
+        while (*(string+j))
         {
-            strbuff[count_bufer]= *(string+i);
-            count_bufer ++;
-            i++;
+        
+            i=j;
+            count_bufer=0;
 
+            while (*(string+i)!=separator)          
+            {
+                strbuff[count_bufer]= *(string+i);
+                count_bufer ++;
+                i++;
+            }
+            array[count_array]= strbuff;
+            count_array++;
+            j+=i;
+        
         }
+    return array;
     
-    return strbuff;
-    
-}
+}    
 
 
 Json_T Json_parser(){
@@ -43,8 +52,10 @@ void JSON_get_all(Json_T json,char* fichero){
     do{
         fgets(lectura_linea,BUFSIZ,archivo);
         printf("%s",lectura_linea);
-        char* separado = split(lectura_linea,58);
-        printf("%s",separado);
+        char** separado = split(lectura_linea,58);
+        printf("Extrato: %s\n",separado[0]);
+        printf("Extrato2: %s\n",separado[1]);
+        free(separado);
     }while (fgetc(archivo)!=EOF);
     
     
