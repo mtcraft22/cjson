@@ -5,32 +5,23 @@
 #include<string.h>
 
 
-char ** split(char* string, int separator){
-    int i=0;
-    int j=0;
-    int count_bufer=0;
-    int count_array=0;
-    char** array=(char **)calloc(BUFSIZ,sizeof(char));
-    char* strbuff=(char *)calloc(BUFSIZ,sizeof(char));
-        while (*(string+j))
-        {
-        
-            i=j;
-            count_bufer=0;
+char** split(char* string, int separator){
 
-            while (*(string+i)!=separator)          
-            {
-                strbuff[count_bufer]= *(string+i);
-                count_bufer ++;
-                i++;
-            }
-            array[count_array]= strbuff;
-            count_array++;
-            j+=i;
-        
-        }
-    return array;
-    
+    int count=0;
+    int A_count=0;
+    char * firts;
+    char **final;
+    while (*(string+count)!=10)
+    {
+        while (*(string+count)!=separator){
+            firts[count]=string[count];
+            count++;
+        }   
+        firts[count]=0;
+        final[A_count]=firts;
+        A_count ++;
+    }
+    return final;
 }    
 
 
@@ -51,11 +42,9 @@ void JSON_get_all(Json_T json,char* fichero){
     char lectura_linea[BUFSIZ];
     do{
         fgets(lectura_linea,BUFSIZ,archivo);
-        printf("%s",lectura_linea);
         char** separado = split(lectura_linea,58);
         printf("Extrato: %s\n",separado[0]);
-        printf("Extrato2: %s\n",separado[1]);
-        free(separado);
+        
     }while (fgetc(archivo)!=EOF);
     
     
