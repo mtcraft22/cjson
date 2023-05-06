@@ -1,28 +1,12 @@
 #include"listas.h"
+#include"cadenas.h"
 #include"json.h"
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 
 
-char** split(char* string, int separator){
-
-    int count=0;
-    int A_count=0;
-    char * firts;
-    char **final;
-    while (*(string+count)!=10)
-    {
-        while (*(string+count)!=separator){
-            firts[count]=string[count];
-            count++;
-        }   
-        firts[count]=0;
-        final[A_count]=firts;
-        A_count ++;
-    }
-    return final;
-}    
+  
 
 
 Json_T Json_parser(){
