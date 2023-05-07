@@ -1,0 +1,93 @@
+\hypertarget{cadenas_8c}{}\doxysection{cadenas.\+c File Reference}
+\label{cadenas_8c}\index{cadenas.c@{cadenas.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cadenas.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cadenas_8c_aba51915c87d64af47fb1cc59348961c9}{OK}}~1;
+\item 
+\#define \mbox{\hyperlink{cadenas_8c_a5cb439d9f933fde4cf23caa370c030e7}{WARNING}}~0;
+\item 
+\#define \mbox{\hyperlink{cadenas_8c_a4362ac890f9e50aac5882590deedde41}{FATAL}}~-\/1;
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cadenas_8c_ae60d0897f4b073efd7662c6a311d0859}{cad\+\_\+len}} (char $\ast$string)
+\item 
+char $\ast$ \mbox{\hyperlink{cadenas_8c_a152afb65c3a58976997d9a533eee23af}{cad\+\_\+slice}} (char $\ast$string, int init, int final)
+\begin{DoxyCompactList}\small\item\em return of string slice from init to final You must free de return value \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{cadenas_8c_aab042dfac6df21c5c971e69aba32aa34}{cad\+\_\+split}} (char $\ast$string, int separator)
+\begin{DoxyCompactList}\small\item\em cad\+\_\+split Like a strtok \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cadenas_8c_a4362ac890f9e50aac5882590deedde41}\label{cadenas_8c_a4362ac890f9e50aac5882590deedde41}} 
+\index{cadenas.c@{cadenas.c}!FATAL@{FATAL}}
+\index{FATAL@{FATAL}!cadenas.c@{cadenas.c}}
+\doxysubsubsection{\texorpdfstring{FATAL}{FATAL}}
+{\footnotesize\ttfamily \#define FATAL~-\/1;}
+
+\mbox{\Hypertarget{cadenas_8c_aba51915c87d64af47fb1cc59348961c9}\label{cadenas_8c_aba51915c87d64af47fb1cc59348961c9}} 
+\index{cadenas.c@{cadenas.c}!OK@{OK}}
+\index{OK@{OK}!cadenas.c@{cadenas.c}}
+\doxysubsubsection{\texorpdfstring{OK}{OK}}
+{\footnotesize\ttfamily \#define OK~1;}
+
+\mbox{\Hypertarget{cadenas_8c_a5cb439d9f933fde4cf23caa370c030e7}\label{cadenas_8c_a5cb439d9f933fde4cf23caa370c030e7}} 
+\index{cadenas.c@{cadenas.c}!WARNING@{WARNING}}
+\index{WARNING@{WARNING}!cadenas.c@{cadenas.c}}
+\doxysubsubsection{\texorpdfstring{WARNING}{WARNING}}
+{\footnotesize\ttfamily \#define WARNING~0;}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cadenas_8c_ae60d0897f4b073efd7662c6a311d0859}\label{cadenas_8c_ae60d0897f4b073efd7662c6a311d0859}} 
+\index{cadenas.c@{cadenas.c}!cad\_len@{cad\_len}}
+\index{cad\_len@{cad\_len}!cadenas.c@{cadenas.c}}
+\doxysubsubsection{\texorpdfstring{cad\_len()}{cad\_len()}}
+{\footnotesize\ttfamily int cad\+\_\+len (\begin{DoxyParamCaption}\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+return string lenght \mbox{\Hypertarget{cadenas_8c_a152afb65c3a58976997d9a533eee23af}\label{cadenas_8c_a152afb65c3a58976997d9a533eee23af}} 
+\index{cadenas.c@{cadenas.c}!cad\_slice@{cad\_slice}}
+\index{cad\_slice@{cad\_slice}!cadenas.c@{cadenas.c}}
+\doxysubsubsection{\texorpdfstring{cad\_slice()}{cad\_slice()}}
+{\footnotesize\ttfamily char $\ast$ cad\+\_\+slice (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{int}]{init,  }\item[{int}]{final }\end{DoxyParamCaption})}
+
+
+
+return of string slice from init to final You must free de return value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & string to make slice \\
+\hline
+{\em init} & string position to star the slice \\
+\hline
+{\em final} & string position to end the slice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cadenas_8c_aab042dfac6df21c5c971e69aba32aa34}\label{cadenas_8c_aab042dfac6df21c5c971e69aba32aa34}} 
+\index{cadenas.c@{cadenas.c}!cad\_split@{cad\_split}}
+\index{cad\_split@{cad\_split}!cadenas.c@{cadenas.c}}
+\doxysubsubsection{\texorpdfstring{cad\_split()}{cad\_split()}}
+{\footnotesize\ttfamily char $\ast$ cad\+\_\+split (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{int}]{separator }\end{DoxyParamCaption})}
+
+
+
+cad\+\_\+split Like a strtok 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & string to split \\
+\hline
+{\em separator} & char to split the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$$\ast$ firts ocurence of separated string 
+\end{DoxyReturn}

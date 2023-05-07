@@ -1,0 +1,59 @@
+\hypertarget{cadenas_8h}{}\doxysection{cadenas.\+h File Reference}
+\label{cadenas_8h}\index{cadenas.h@{cadenas.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{cadenas_8h_a89397808116203918705087a66c0d5b6}{cad\+\_\+split}} (char $\ast$string, int separator)
+\begin{DoxyCompactList}\small\item\em cad\+\_\+split Like a strtok \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{cadenas_8h_a152afb65c3a58976997d9a533eee23af}{cad\+\_\+slice}} (char $\ast$string, int init, int final)
+\begin{DoxyCompactList}\small\item\em return of string slice from init to final You must free de return value \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cadenas_8h_ae60d0897f4b073efd7662c6a311d0859}{cad\+\_\+len}} (char $\ast$string)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cadenas_8h_ae60d0897f4b073efd7662c6a311d0859}\label{cadenas_8h_ae60d0897f4b073efd7662c6a311d0859}} 
+\index{cadenas.h@{cadenas.h}!cad\_len@{cad\_len}}
+\index{cad\_len@{cad\_len}!cadenas.h@{cadenas.h}}
+\doxysubsubsection{\texorpdfstring{cad\_len()}{cad\_len()}}
+{\footnotesize\ttfamily int cad\+\_\+len (\begin{DoxyParamCaption}\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+return string lenght \mbox{\Hypertarget{cadenas_8h_a152afb65c3a58976997d9a533eee23af}\label{cadenas_8h_a152afb65c3a58976997d9a533eee23af}} 
+\index{cadenas.h@{cadenas.h}!cad\_slice@{cad\_slice}}
+\index{cad\_slice@{cad\_slice}!cadenas.h@{cadenas.h}}
+\doxysubsubsection{\texorpdfstring{cad\_slice()}{cad\_slice()}}
+{\footnotesize\ttfamily char $\ast$ cad\+\_\+slice (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{int}]{init,  }\item[{int}]{final }\end{DoxyParamCaption})}
+
+
+
+return of string slice from init to final You must free de return value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & string to make slice \\
+\hline
+{\em init} & string position to star the slice \\
+\hline
+{\em final} & string position to end the slice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cadenas_8h_a89397808116203918705087a66c0d5b6}\label{cadenas_8h_a89397808116203918705087a66c0d5b6}} 
+\index{cadenas.h@{cadenas.h}!cad\_split@{cad\_split}}
+\index{cad\_split@{cad\_split}!cadenas.h@{cadenas.h}}
+\doxysubsubsection{\texorpdfstring{cad\_split()}{cad\_split()}}
+{\footnotesize\ttfamily char $\ast$$\ast$ cad\+\_\+split (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{int}]{separator }\end{DoxyParamCaption})}
+
+
+
+cad\+\_\+split Like a strtok 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & string to split \\
+\hline
+{\em separator} & char to split the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$$\ast$ firts ocurence of separated string 
+\end{DoxyReturn}

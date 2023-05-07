@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mt_c_lib: Fichero Fuente json.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Mt_c_lib<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">c_lib</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">json.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d05/json_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include&quot;<a class="code" href="../../df/d8b/listas_8h.html">listas.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d4/d05/json_8h.html#a5a2a76e18bbd8b8cd9026f1cee18f197">   10</a></span><span class="preprocessor">#define APPEND 0</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d4/d05/json_8h.html#ac5e6ea3bc12db0b69fd25d64090fcb93">   11</a></span><span class="preprocessor">#define REPLACE 1</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d5/dea/structjson.html">   31</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../d5/dea/structjson.html">json</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d5/dea/structjson.html#a60e3889f77c938a87c04112076eb9873">   33</a></span>    <a class="code hl_struct" href="../../d0/dfa/structli.html">Lista</a> <a class="code hl_variable" href="../../d5/dea/structjson.html#a60e3889f77c938a87c04112076eb9873">obj</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d5/dea/structjson.html#a316a88ab2181f84a3683bb66d2dacb3d">   34</a></span>    void(*<a class="code hl_variable" href="../../d5/dea/structjson.html#a316a88ab2181f84a3683bb66d2dacb3d">get</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="../../d5/dea/structjson.html">json</a>,char *);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d5/dea/structjson.html#acee013d629a0abb0a06ba421f28d4956">   35</a></span>    void(*<a class="code hl_variable" href="../../d5/dea/structjson.html#acee013d629a0abb0a06ba421f28d4956">dump</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="../../d5/dea/structjson.html">json</a>,char *,int);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d5/dea/structjson.html#abacab6f209be46ca7fb8445c071cd336">   36</a></span>    <span class="keywordtype">char</span>*(*to_str)(<span class="keyword">struct </span><a class="code hl_struct" href="../../d5/dea/structjson.html">json</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d4/d05/json_8h.html#aac81198aea867795e36dd37b41c9fc31">   37</a></span>}<a class="code hl_typedef" href="../../d4/d05/json_8h.html#aac81198aea867795e36dd37b41c9fc31">Json_T</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d05/json_8h.html#aef1152df86d4f9d488d928ddb995c14d">JSON_get_all</a>(<a class="code hl_struct" href="../../d5/dea/structjson.html">Json_T</a> <a class="code hl_struct" href="../../d5/dea/structjson.html">json</a>,<span class="keywordtype">char</span> * fichero);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d05/json_8h.html#a39a6330ff6d7ea9eaa427431b1516083">JSON_dump</a>(<a class="code hl_struct" href="../../d5/dea/structjson.html">Json_T</a> <a class="code hl_struct" href="../../d5/dea/structjson.html">json</a>,<span class="keywordtype">char</span> * fichero,<span class="keywordtype">int</span> mode);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">char</span>* <a class="code hl_function" href="../../d4/d05/json_8h.html#adc7b7b55cc2333121365057c79adca70">JSON_2_STRING</a>(<a class="code hl_struct" href="../../d5/dea/structjson.html">Json_T</a> <a class="code hl_struct" href="../../d5/dea/structjson.html">json</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><a class="code hl_struct" href="../../d5/dea/structjson.html">Json_T</a> <a class="code hl_function" href="../../d4/d05/json_8h.html#ac7f476dc3e9849bcb336389de6248516">Json_parser</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d05/json_8h.html#a100706bd8f45ad3fe750a622b9d1d9a3">Desctructor_Json_parser</a>(<a class="code hl_struct" href="../../d5/dea/structjson.html">Json_T</a> *instace);</div>
+<div class="ttc" id="ajson_8h_html_a100706bd8f45ad3fe750a622b9d1d9a3"><div class="ttname"><a href="../../d4/d05/json_8h.html#a100706bd8f45ad3fe750a622b9d1d9a3">Desctructor_Json_parser</a></div><div class="ttdeci">void Desctructor_Json_parser(Json_T *instace)</div><div class="ttdoc">Libera la distacia ya que el bufer obj es memoria dinamica.</div><div class="ttdef"><b>Definition:</b> json.c:18</div></div>
+<div class="ttc" id="ajson_8h_html_a39a6330ff6d7ea9eaa427431b1516083"><div class="ttname"><a href="../../d4/d05/json_8h.html#a39a6330ff6d7ea9eaa427431b1516083">JSON_dump</a></div><div class="ttdeci">void JSON_dump(Json_T json, char *fichero, int mode)</div><div class="ttdef"><b>Definition:</b> json.c:42</div></div>
+<div class="ttc" id="ajson_8h_html_aac81198aea867795e36dd37b41c9fc31"><div class="ttname"><a href="../../d4/d05/json_8h.html#aac81198aea867795e36dd37b41c9fc31">Json_T</a></div><div class="ttdeci">struct json Json_T</div><div class="ttdoc">Estructura para parsear estructuras de tipo JSON que son: leer objetos de un fichero ....</div></div>
+<div class="ttc" id="ajson_8h_html_ac7f476dc3e9849bcb336389de6248516"><div class="ttname"><a href="../../d4/d05/json_8h.html#ac7f476dc3e9849bcb336389de6248516">Json_parser</a></div><div class="ttdeci">Json_T Json_parser()</div><div class="ttdoc">Constructor de los objectos tipo Json_T.</div><div class="ttdef"><b>Definition:</b> json.c:9</div></div>
+<div class="ttc" id="ajson_8h_html_adc7b7b55cc2333121365057c79adca70"><div class="ttname"><a href="../../d4/d05/json_8h.html#adc7b7b55cc2333121365057c79adca70">JSON_2_STRING</a></div><div class="ttdeci">char * JSON_2_STRING(Json_T json)</div><div class="ttdef"><b>Definition:</b> json.c:27</div></div>
+<div class="ttc" id="ajson_8h_html_aef1152df86d4f9d488d928ddb995c14d"><div class="ttname"><a href="../../d4/d05/json_8h.html#aef1152df86d4f9d488d928ddb995c14d">JSON_get_all</a></div><div class="ttdeci">void JSON_get_all(Json_T json, char *fichero)</div><div class="ttdoc">Rescata todos los objectos JSON desde un fichero.</div><div class="ttdef"><b>Definition:</b> json.c:28</div></div>
+<div class="ttc" id="alistas_8h_html"><div class="ttname"><a href="../../df/d8b/listas_8h.html">listas.h</a></div></div>
+<div class="ttc" id="astructjson_html"><div class="ttname"><a href="../../d5/dea/structjson.html">json</a></div><div class="ttdoc">Estructura para parsear estructuras de tipo JSON que son: leer objetos de un fichero ....</div><div class="ttdef"><b>Definition:</b> json.h:32</div></div>
+<div class="ttc" id="astructjson_html_a316a88ab2181f84a3683bb66d2dacb3d"><div class="ttname"><a href="../../d5/dea/structjson.html#a316a88ab2181f84a3683bb66d2dacb3d">json::get</a></div><div class="ttdeci">void(* get)(struct json, char *)</div><div class="ttdef"><b>Definition:</b> json.h:34</div></div>
+<div class="ttc" id="astructjson_html_a60e3889f77c938a87c04112076eb9873"><div class="ttname"><a href="../../d5/dea/structjson.html#a60e3889f77c938a87c04112076eb9873">json::obj</a></div><div class="ttdeci">Lista obj</div><div class="ttdef"><b>Definition:</b> json.h:33</div></div>
+<div class="ttc" id="astructjson_html_acee013d629a0abb0a06ba421f28d4956"><div class="ttname"><a href="../../d5/dea/structjson.html#acee013d629a0abb0a06ba421f28d4956">json::dump</a></div><div class="ttdeci">void(* dump)(struct json, char *, int)</div><div class="ttdef"><b>Definition:</b> json.h:35</div></div>
+<div class="ttc" id="astructli_html"><div class="ttname"><a href="../../d0/dfa/structli.html">li</a></div><div class="ttdef"><b>Definition:</b> listas.h:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

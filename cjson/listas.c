@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include"listas.h"
 
-Nodo* crear_nodo(Vector* dato){
+Nodo* crear_nodo(Pares* dato){
 	Nodo* nodo = (Nodo*)malloc(sizeof(Nodo));
 	nodo->v.clave=dato->clave;
 	nodo->v.valor=dato->valor;
@@ -14,13 +14,13 @@ void destruir_nodo(Nodo* nodo){
 	free(nodo);
 }
 
-void Insertar_pricipio(Lista* lista, Vector* dato){
+void Insertar_pricipio(Lista* lista, Pares* dato){
 	Nodo* nodo=crear_nodo(dato);
 	nodo->siguiente=lista->cabeza;
 	lista->cabeza=nodo;
 	lista->Longitud++;
 }
-void Insertar_final(Lista* lista, Vector* dato){
+void Insertar_final(Lista* lista, Pares* dato){
 	Nodo* nodo=crear_nodo(dato);
 	if (lista->cabeza==NULL){
 		lista->cabeza= nodo;
@@ -34,7 +34,7 @@ void Insertar_final(Lista* lista, Vector* dato){
 	}
 	lista->Longitud++;
 }
-void Insertar_Despues(int n, Lista* lista, Vector* dato){
+void Insertar_Despues(int n, Lista* lista, Pares* dato){
 	Nodo* nodo=crear_nodo(dato);
 	if (lista->cabeza==NULL){
 		lista->cabeza= nodo;
@@ -52,7 +52,7 @@ void Insertar_Despues(int n, Lista* lista, Vector* dato){
 	lista->Longitud++;
 
 }
-Vector* obtener(Lista* lista, int n){
+Pares* obtener(Lista* lista, int n){
 	if (lista->cabeza==NULL){
 		return NULL;
 	}else{
@@ -120,7 +120,7 @@ void Elimina_enmedio(Lista* lista, int n){
 	}
 	lista->Longitud--;
 }
-void por_cada(Lista* lista , void(*funcion)(Vector* dato)){
+void por_cada(Lista* lista , void(*funcion)(Pares* dato)){
 	Nodo* actual=lista->cabeza;
 	while (actual->siguiente)
 	{

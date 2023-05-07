@@ -1,0 +1,127 @@
+\hypertarget{listas_8h}{}\doxysection{listas.\+h File Reference}
+\label{listas_8h}\index{listas.h@{listas.h}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvector}{vector}}
+\item 
+struct \mbox{\hyperlink{structnodo}{nodo}}
+\item 
+struct \mbox{\hyperlink{structli}{li}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structvector}{vector}} \mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}}
+\item 
+typedef struct \mbox{\hyperlink{structnodo}{nodo}} \mbox{\hyperlink{listas_8h_a46556b0fd3be65be11d967516d9866f1}{Nodo}}
+\item 
+typedef struct \mbox{\hyperlink{structli}{li}} \mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{listas_8h_a46556b0fd3be65be11d967516d9866f1}{Nodo}} $\ast$ \mbox{\hyperlink{listas_8h_a07795f12269801c344528854c770c6c0}{crear\+\_\+nodo}} (\mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$dato)
+\item 
+void \mbox{\hyperlink{listas_8h_a8f868b69cd0b2453bd50a3e0393d20ea}{destruir\+\_\+nodo}} (\mbox{\hyperlink{listas_8h_a46556b0fd3be65be11d967516d9866f1}{Nodo}} $\ast$\mbox{\hyperlink{structnodo}{nodo}})
+\item 
+void \mbox{\hyperlink{listas_8h_a86b6d12a31013eb3ead12d80360f4a40}{Insertar\+\_\+pricipio}} (\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$lista, \mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$dato)
+\item 
+void \mbox{\hyperlink{listas_8h_adcef5f8543ed611203bb296a551cafcf}{Insertar\+\_\+final}} (\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$lista, \mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$dato)
+\item 
+void \mbox{\hyperlink{listas_8h_a8b2d525afaeb08b10c757d8157521f8e}{Insertar\+\_\+\+Despues}} (int n, \mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$lista, \mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$dato)
+\item 
+\mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$ \mbox{\hyperlink{listas_8h_a47d95e2961e995b8043dbe7fc2adc9e7}{obtener}} (\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}}, int n)
+\item 
+int \mbox{\hyperlink{listas_8h_a753cf6ff176aecc73f933ab34593d502}{Longitud}} (\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$lista)
+\item 
+void \mbox{\hyperlink{listas_8h_abdb3641ffb77b8bd9f51fd3f3043b638}{Elimina\+\_\+final}} (\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$lista)
+\item 
+void \mbox{\hyperlink{listas_8h_ad3408c64a2d5ed503c86038339eafdea}{Elimina\+\_\+enmedio}} (\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$lista, int n)
+\item 
+void \mbox{\hyperlink{listas_8h_ad39966dfd60f2165f5afef14c0ea7cf0}{por\+\_\+cada}} (\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$lista, void($\ast$funcion)(\mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$dato))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}\label{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}} 
+\index{listas.h@{listas.h}!Lista@{Lista}}
+\index{Lista@{Lista}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Lista}{Lista}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structli}{li}} \mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}}}
+
+\mbox{\Hypertarget{listas_8h_a46556b0fd3be65be11d967516d9866f1}\label{listas_8h_a46556b0fd3be65be11d967516d9866f1}} 
+\index{listas.h@{listas.h}!Nodo@{Nodo}}
+\index{Nodo@{Nodo}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Nodo}{Nodo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structnodo}{nodo}} \mbox{\hyperlink{listas_8h_a46556b0fd3be65be11d967516d9866f1}{Nodo}}}
+
+\mbox{\Hypertarget{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}\label{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}} 
+\index{listas.h@{listas.h}!Vector@{Vector}}
+\index{Vector@{Vector}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Vector}{Vector}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structvector}{vector}} \mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{listas_8h_a07795f12269801c344528854c770c6c0}\label{listas_8h_a07795f12269801c344528854c770c6c0}} 
+\index{listas.h@{listas.h}!crear\_nodo@{crear\_nodo}}
+\index{crear\_nodo@{crear\_nodo}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{crear\_nodo()}{crear\_nodo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a46556b0fd3be65be11d967516d9866f1}{Nodo}} $\ast$ crear\+\_\+nodo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$}]{dato }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_a8f868b69cd0b2453bd50a3e0393d20ea}\label{listas_8h_a8f868b69cd0b2453bd50a3e0393d20ea}} 
+\index{listas.h@{listas.h}!destruir\_nodo@{destruir\_nodo}}
+\index{destruir\_nodo@{destruir\_nodo}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{destruir\_nodo()}{destruir\_nodo()}}
+{\footnotesize\ttfamily void destruir\+\_\+nodo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_a46556b0fd3be65be11d967516d9866f1}{Nodo}} $\ast$}]{nodo }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_ad3408c64a2d5ed503c86038339eafdea}\label{listas_8h_ad3408c64a2d5ed503c86038339eafdea}} 
+\index{listas.h@{listas.h}!Elimina\_enmedio@{Elimina\_enmedio}}
+\index{Elimina\_enmedio@{Elimina\_enmedio}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Elimina\_enmedio()}{Elimina\_enmedio()}}
+{\footnotesize\ttfamily void Elimina\+\_\+enmedio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$}]{lista,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_abdb3641ffb77b8bd9f51fd3f3043b638}\label{listas_8h_abdb3641ffb77b8bd9f51fd3f3043b638}} 
+\index{listas.h@{listas.h}!Elimina\_final@{Elimina\_final}}
+\index{Elimina\_final@{Elimina\_final}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Elimina\_final()}{Elimina\_final()}}
+{\footnotesize\ttfamily void Elimina\+\_\+final (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$}]{lista }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_a8b2d525afaeb08b10c757d8157521f8e}\label{listas_8h_a8b2d525afaeb08b10c757d8157521f8e}} 
+\index{listas.h@{listas.h}!Insertar\_Despues@{Insertar\_Despues}}
+\index{Insertar\_Despues@{Insertar\_Despues}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Insertar\_Despues()}{Insertar\_Despues()}}
+{\footnotesize\ttfamily void Insertar\+\_\+\+Despues (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$}]{lista,  }\item[{\mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$}]{dato }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_adcef5f8543ed611203bb296a551cafcf}\label{listas_8h_adcef5f8543ed611203bb296a551cafcf}} 
+\index{listas.h@{listas.h}!Insertar\_final@{Insertar\_final}}
+\index{Insertar\_final@{Insertar\_final}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Insertar\_final()}{Insertar\_final()}}
+{\footnotesize\ttfamily void Insertar\+\_\+final (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$}]{lista,  }\item[{\mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$}]{dato }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_a86b6d12a31013eb3ead12d80360f4a40}\label{listas_8h_a86b6d12a31013eb3ead12d80360f4a40}} 
+\index{listas.h@{listas.h}!Insertar\_pricipio@{Insertar\_pricipio}}
+\index{Insertar\_pricipio@{Insertar\_pricipio}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Insertar\_pricipio()}{Insertar\_pricipio()}}
+{\footnotesize\ttfamily void Insertar\+\_\+pricipio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$}]{lista,  }\item[{\mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$}]{dato }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_a753cf6ff176aecc73f933ab34593d502}\label{listas_8h_a753cf6ff176aecc73f933ab34593d502}} 
+\index{listas.h@{listas.h}!Longitud@{Longitud}}
+\index{Longitud@{Longitud}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{Longitud()}{Longitud()}}
+{\footnotesize\ttfamily int Longitud (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$}]{lista }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_a47d95e2961e995b8043dbe7fc2adc9e7}\label{listas_8h_a47d95e2961e995b8043dbe7fc2adc9e7}} 
+\index{listas.h@{listas.h}!obtener@{obtener}}
+\index{obtener@{obtener}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{obtener()}{obtener()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$ obtener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$}]{Lista,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{listas_8h_ad39966dfd60f2165f5afef14c0ea7cf0}\label{listas_8h_ad39966dfd60f2165f5afef14c0ea7cf0}} 
+\index{listas.h@{listas.h}!por\_cada@{por\_cada}}
+\index{por\_cada@{por\_cada}!listas.h@{listas.h}}
+\doxysubsubsection{\texorpdfstring{por\_cada()}{por\_cada()}}
+{\footnotesize\ttfamily void por\+\_\+cada (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{listas_8h_ae5a576e06c34c78fd9e2f82d5ea9df2f}{Lista}} $\ast$}]{lista,  }\item[{void($\ast$)(\mbox{\hyperlink{listas_8h_a67df6442cbc09def7e2d82c71522e1ae}{Vector}} $\ast$dato)}]{funcion }\end{DoxyParamCaption})}
+

@@ -1,0 +1,65 @@
+\hypertarget{json_8c}{}\doxysection{json.\+c File Reference}
+\label{json_8c}\index{json.c@{json.c}}
+{\ttfamily \#include \char`\"{}listas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cadenas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json_8h_aac81198aea867795e36dd37b41c9fc31}{Json\+\_\+T}} \mbox{\hyperlink{json_8c_ac7f476dc3e9849bcb336389de6248516}{Json\+\_\+parser}} ()
+\item 
+char $\ast$ \mbox{\hyperlink{json_8c_adc7b7b55cc2333121365057c79adca70}{JSON\+\_\+2\+\_\+\+STRING}} (\mbox{\hyperlink{json_8h_aac81198aea867795e36dd37b41c9fc31}{Json\+\_\+T}} \mbox{\hyperlink{structjson}{json}})
+\item 
+void \mbox{\hyperlink{json_8c_aef1152df86d4f9d488d928ddb995c14d}{JSON\+\_\+get\+\_\+all}} (\mbox{\hyperlink{json_8h_aac81198aea867795e36dd37b41c9fc31}{Json\+\_\+T}} \mbox{\hyperlink{structjson}{json}}, char $\ast$fichero)
+\begin{DoxyCompactList}\small\item\em get all json fields of specified json file this objects will store in \mbox{\hyperlink{structjson_a60e3889f77c938a87c04112076eb9873}{Json\+\_\+\+T.\+obj}} fiel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{json_8c_a3b70a7a4fcd3a7485e77f723ef23b3ba}{JSON\+\_\+dump}} (\mbox{\hyperlink{json_8h_aac81198aea867795e36dd37b41c9fc31}{Json\+\_\+T}} \mbox{\hyperlink{structjson}{json}}, char $\ast$fichero, int)
+\item 
+int \mbox{\hyperlink{json_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{json_8c_adc7b7b55cc2333121365057c79adca70}\label{json_8c_adc7b7b55cc2333121365057c79adca70}} 
+\index{json.c@{json.c}!JSON\_2\_STRING@{JSON\_2\_STRING}}
+\index{JSON\_2\_STRING@{JSON\_2\_STRING}!json.c@{json.c}}
+\doxysubsubsection{\texorpdfstring{JSON\_2\_STRING()}{JSON\_2\_STRING()}}
+{\footnotesize\ttfamily char $\ast$ JSON\+\_\+2\+\_\+\+STRING (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{json_8h_aac81198aea867795e36dd37b41c9fc31}{Json\+\_\+T}}}]{json }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{json_8c_a3b70a7a4fcd3a7485e77f723ef23b3ba}\label{json_8c_a3b70a7a4fcd3a7485e77f723ef23b3ba}} 
+\index{json.c@{json.c}!JSON\_dump@{JSON\_dump}}
+\index{JSON\_dump@{JSON\_dump}!json.c@{json.c}}
+\doxysubsubsection{\texorpdfstring{JSON\_dump()}{JSON\_dump()}}
+{\footnotesize\ttfamily void JSON\+\_\+dump (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{json_8h_aac81198aea867795e36dd37b41c9fc31}{Json\+\_\+T}}}]{json,  }\item[{char $\ast$}]{fichero,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{json_8c_aef1152df86d4f9d488d928ddb995c14d}\label{json_8c_aef1152df86d4f9d488d928ddb995c14d}} 
+\index{json.c@{json.c}!JSON\_get\_all@{JSON\_get\_all}}
+\index{JSON\_get\_all@{JSON\_get\_all}!json.c@{json.c}}
+\doxysubsubsection{\texorpdfstring{JSON\_get\_all()}{JSON\_get\_all()}}
+{\footnotesize\ttfamily void JSON\+\_\+get\+\_\+all (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{json_8h_aac81198aea867795e36dd37b41c9fc31}{Json\+\_\+T}}}]{json,  }\item[{char $\ast$}]{fichero }\end{DoxyParamCaption})}
+
+
+
+get all json fields of specified json file this objects will store in \mbox{\hyperlink{structjson_a60e3889f77c938a87c04112076eb9873}{Json\+\_\+\+T.\+obj}} fiel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & Json\+\_\+T instance \\
+\hline
+{\em fichero} & file to get the objects \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{json_8c_ac7f476dc3e9849bcb336389de6248516}\label{json_8c_ac7f476dc3e9849bcb336389de6248516}} 
+\index{json.c@{json.c}!Json\_parser@{Json\_parser}}
+\index{Json\_parser@{Json\_parser}!json.c@{json.c}}
+\doxysubsubsection{\texorpdfstring{Json\_parser()}{Json\_parser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{json_8h_aac81198aea867795e36dd37b41c9fc31}{Json\+\_\+T}} Json\+\_\+parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{json_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{json_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{json.c@{json.c}!main@{main}}
+\index{main@{main}!json.c@{json.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
