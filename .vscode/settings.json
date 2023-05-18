@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "stdlib.h": "c",
-        "insultar.h": "c"
+        "insultar.h": "c",
+        "stdarg.h": "c"
     }
 }

@@ -1,0 +1,17 @@
+{
+    "marc":{
+        "altura":185,
+        "peso":110,
+        "edad":16
+    },
+    "arturo":{
+        "altura":160,
+        "peso":50,
+        "edad":13
+    },
+    "jose":{
+        "altura":105,
+        "peso":45,
+        "edad":77
+    }
+}
