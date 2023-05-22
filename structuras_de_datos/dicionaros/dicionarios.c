@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"listas.h"
+#include"dicionarios.h"
 
 Nodo* crear_nodo(Pares* dato){
 	Nodo* nodo = (Nodo*)malloc(sizeof(Nodo));
@@ -129,3 +129,10 @@ void por_cada(Lista* lista , void(*funcion)(Pares* dato)){
 	}
 	funcion(&actual->v);
 }
+
+
+void* valor(Lista* lista, void* clave);
+void* clave(Lista* lista, void* valor);
+
+void por_claves();
+void por_valores();

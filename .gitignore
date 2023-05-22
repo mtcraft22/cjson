@@ -1,5 +1,11 @@
+#code shit
+./.vscode
+#doxyfile shit
+Doxyfile
+./html
 # Prerequisites
 *.d
+
 
 # Object files
 *.o
@@ -21,6 +27,7 @@
 *.a
 *.la
 *.lo
+
 
 # Shared objects (inc. Windows DLLs)
 *.dll

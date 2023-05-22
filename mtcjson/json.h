@@ -1,5 +1,7 @@
-#pragma once
-#include"listas.h"
+#ifndef json
+#define json
+
+#include"../structuras_de_datos/dicionaros/dicionarios.h"
 
 
 /**
@@ -87,3 +89,4 @@ Json_T Json_parser();
  * @param instace 
  */
 void Desctructor_Json_parser(Json_T *instace);
+#endif //json.h

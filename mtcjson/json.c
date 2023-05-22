@@ -1,4 +1,4 @@
-#include"listas.h"
+#include"../structuras_de_datos/dicionaros/dicionarios.h"
 #include"cadenas.h"
 #include"json.h"
 #include<stdio.h>

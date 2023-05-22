@@ -21,14 +21,25 @@ typedef struct li
 }Lista;
 
 Nodo* crear_nodo(Pares* dato);
+
 void destruir_nodo(Nodo* nodo);
 void Insertar_pricipio(Lista* lista, Pares* dato);
 void Insertar_final(Lista* lista, Pares* dato);
 void Insertar_Despues(int n, Lista* lista, Pares* dato);
+
 Pares* obtener(Lista* Lista, int n);
+
 int Longitud(Lista* lista);
 void Elimina_final(Lista* lista);
 void Elimina_enmedio(Lista* lista, int n);
+
 void por_cada(Lista* lista , void(*funcion)(Pares* dato));
+
+void* valor(Lista* lista, void* clave);
+void* clave(Lista* lista, void* valor);
+
+void por_claves();
+void por_valores();
+
 #endif //final list
 
