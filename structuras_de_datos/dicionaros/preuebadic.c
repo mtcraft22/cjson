@@ -19,4 +19,12 @@ int main (void){
 
     por_cada(&SO_lin,printar);
 
+    void* valor2=clave(&SO_lin,"Minix");
+    if (valor2!=NULL){
+        printf("%s",valor2);
+    }else{
+        printf("no encontrado el valor");
+    }
+    return 0;
+
 }

@@ -131,8 +131,36 @@ void por_cada(Lista* lista , void(*funcion)(Pares* dato)){
 }
 
 
-void* valor(Lista* lista, void* clave);
-void* clave(Lista* lista, void* valor);
+void* valor(Lista* lista, void* clave){
 
-void por_claves();
-void por_valores();
+	Nodo* actual=lista->cabeza;
+	while (actual->siguiente)
+	{
+		if(clave==actual->v.clave){
+			return actual->v.valor;
+		}
+		actual=actual->siguiente;
+	}
+	if(clave==actual->v.clave){
+			return actual->v.valor;
+	}else{
+		return NULL;
+	}
+}
+
+void* clave(Lista* lista, void* valor){
+
+	Nodo* actual=lista->cabeza;
+	while (actual->siguiente)
+	{
+		if(valor==actual->v.valor){
+			return actual->v.clave;
+		}
+		actual=actual->siguiente;
+	}
+	if(valor==actual->v.valor){
+			return actual->v.clave;
+	}else{
+		return NULL;
+	}
+}
