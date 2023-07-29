@@ -1,28 +1,15 @@
 #include<stdio.h>
-typedef struct object
-{
-    void* self;
-    void* super;
-
-}Object_t;
 
 typedef struct vehiculo
 {
+    int id;
     int ruedas;
-    int arancado;
+    int arancado;   
     void (*arancar)(struct vehiculo*);
+    void (*setruedas)(struct vehiculo*, int ruedas);
     
 }Vehiculo_t;
-typedef struct camion
-{
-    Vehiculo_t *super;
-    char* tipo_carga;
-    int carga;
-    void (*descargar)(struct camion*);
-
-
-}Camion_t;
-void arancar(Vehiculo_t*self){
+void Arancar(Vehiculo_t*self){
     if (self->arancado){
         self->arancado=0;
     }else{
@@ -30,16 +17,29 @@ void arancar(Vehiculo_t*self){
         self->arancado=1;
     }
 }
-
+void Setruedas(Vehiculo_t*self,int r){
+    self->ruedas=r;
+}
 Vehiculo_t vehiculo_t(int ruedas){
-    Vehiculo_t self;
+    
+    struct vehiculo self;
+    
+    #define arancar() arancar(self)
+    #define setruedas(r) setruedas(self,r)
     self.arancado=0;
     self.ruedas=ruedas;
-    self.arancar=arancar;
+    self.arancar=Arancar;
+    self.setruedas=Setruedas;
+    
     return self;
 }
 int main(void){
-    Vehiculo_t coche=vehiculo_t(4);
-    coche.arancar(&coche);
+    
+    Vehiculo_t coche = vehiculo_t(5);
+    #define self &coche
+    coche.setruedas(5);
+    coche.arancar();
+    #undef self
+    printf("ruedas es: %i\n",coche.ruedas);
     return 0;
 }
