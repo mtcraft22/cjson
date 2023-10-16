@@ -1,26 +1,28 @@
 #include <stdio.h>
 #include <string.h>
+
+int hash_size = 20;
+
 typedef struct {
     char* nombre;
     int edad;
     struct Persona *next;
 }Persona;
-Persona* dictlist[10];
 
-int j = 0;
-
+Persona* dictlist[BUFSIZ];
 unsigned int hash(char* nombre){
     unsigned int value = 0;
     int len = strnlen(nombre,256);
     int i = 0;
     for (i;i<len;i++){
         value +=nombre[i];
-        value = (value*nombre[i]) %10;
+        value = (value*nombre[i]) %hash_size;
     }
     return value ;
 }
 
 void insertar(Persona* persona){
+    
     if(dictlist[hash(persona->nombre)]==NULL){
         dictlist[hash(persona->nombre)]=persona;
     }else{
@@ -33,9 +35,6 @@ void insertar(Persona* persona){
             }
             sig->next=persona;
         }
-        
-
-
     }
 }
 void debug_map(Persona*map_array[],int array_map_size){
@@ -63,34 +62,16 @@ Persona * get_pair (Persona* persona){
     }
 }
 int main(void ){
-    Persona pepe = {.nombre="pepe",.edad=23};
-    Persona marc = {.nombre="marc",.edad=33};
-    Persona jose = {.nombre="jose",.edad=43};
-    Persona luis = {.nombre="luis",.edad=53};
-    Persona juan = {.nombre="juan",.edad=63};
-    Persona paco = {.nombre="paco",.edad=73};
-    Persona maria = {.nombre="maria",.edad=18};
-    Persona pepe2 = {.nombre="pepeluis",.edad=23};
-    Persona marc2 = {.nombre="marcjuajo",.edad=33};
-    Persona jose2 = {.nombre="joseluis",.edad=43};
-    Persona luis2 = {.nombre="luisfuf",.edad=53};
-    Persona juan2 = {.nombre="juanfof",.edad=63};
-    Persona paco2 = {.nombre="pacof",.edad=73};
-    Persona maria2 = {.nombre="mariases",.edad=18};
-
-    insertar(&paco);
-    insertar(&pepe);
-    insertar(&marc);
-    insertar(&jose);
-    insertar(&luis);
-    insertar(&juan);
-    insertar(&maria);
-    insertar(&paco2);
-    insertar(&pepe2);
-    insertar(&marc2);
-    insertar(&jose2);
-    insertar(&luis2);
-    insertar(&juan2);
-    insertar(&maria2);
-    debug_map(dictlist, 10);
+    Persona a = {.nombre="pepe",.edad=23};
+    Persona b = {.nombre="marc",.edad=33};
+    Persona c = {.nombre="jose",.edad=43};
+    Persona d = {.nombre="luis",.edad=53};
+    
+    insertar(&a); 
+    insertar(&b); 
+    insertar(&c); 
+    insertar(&d);
+   
+    
+    debug_map(dictlist, hash_size);
 }
